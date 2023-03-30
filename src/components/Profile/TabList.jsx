@@ -48,20 +48,12 @@ const Container = styled.div`
 const tabs = [
   {
     id: "tweets",
-    label: "Tweets",
+    label: "Posts",
   },
-  {
-    id: "tweet-replies",
-    label: "Tweets & replies",
-  },
-  {
-    id: "media",
-    label: "Media",
-  },
-  {
-    id: "likes",
-    label: "Likes",
-  },
+  // {
+  //   id: "likes",
+  //   label: "Likes",
+  // },
 ];
 
 export default function TabList() {

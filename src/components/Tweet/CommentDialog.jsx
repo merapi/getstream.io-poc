@@ -157,7 +157,7 @@ export default function CommentDialog({
             <TweetForm
               className="comment-form"
               submitText="Reply"
-              placeholder="Tweet your reply"
+              placeholder="Post your reply"
               onSubmit={onSubmit}
               shouldFocus={true}
             />

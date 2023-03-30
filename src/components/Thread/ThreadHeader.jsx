@@ -33,7 +33,7 @@ export default function ThreadHeader() {
       <button onClick={navigateBack}>
         <ArrowLeft size={20} color="white" />
       </button>
-      <span>Tweet</span>
+      <span>Post</span>
     </Header>
   );
 }

@@ -251,7 +251,7 @@ export default function LeftSide({ onClickTweet }) {
         </button> */}
       </div>
       <button onClick={onClickTweet} className="tweet-btn">
-        Tweet
+        Post
       </button>
       <button className="profile-section">
         <div className="details">

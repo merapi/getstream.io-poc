@@ -172,7 +172,7 @@ const actions = [
 ];
 
 export default function TweetForm({
-  submitText = "Tweet",
+  submitText = "Post",
   onSubmit,
   className,
   placeholder,
@@ -203,7 +203,7 @@ export default function TweetForm({
     e.preventDefault();
 
     if (exceededMax)
-      return alert("Tweet cannot exceed " + MAX_CHARS + " characters");
+      return alert("Post cannot exceed " + MAX_CHARS + " characters");
 
     await onSubmit(text);
 

@@ -77,7 +77,7 @@ export default function ProfileHeader() {
         </button>
         <div className="info">
           <h1>{user.data.name}</h1>
-          <span className="info__tweets-count">{activitiesCount} Tweets</span>
+          <span className="info__tweets-count">{activitiesCount} Posts</span>
         </div>
       </div>
       <div className="cover">

@@ -251,7 +251,7 @@ export default function TweetContent({ activity }) {
             onSubmit={onPostComment}
             submitText="Reply"
             collapsedOnMount={true}
-            placeholder="Tweet your reply"
+            placeholder="Post your reply"
             replyingTo={tweetActor.id}
           />
         </div>
