@@ -9,6 +9,7 @@ import Calendar from "../Icons/Calendar";
 import { formatStringWithLink } from "../../utils/string";
 import { ProfileContext } from "./ProfileContent";
 import FollowBtn from "../FollowBtn";
+import getImageForUser from "../../utils/getImageForUser";
 
 const Container = styled.div`
   padding: 20px;
@@ -110,19 +111,21 @@ const Container = styled.div`
 `;
 
 const actions = [
-  {
-    Icon: More,
-    id: "more",
-  },
-  {
-    Icon: Mail,
-    id: "message",
-  },
+  // {
+  //   Icon: More,
+  //   id: "more",
+  // },
+  // {
+  //   Icon: Mail,
+  //   id: "message",
+  // },
 ];
 
 export default function ProfileBio() {
   const { client } = useStreamContext();
   const { user } = useContext(ProfileContext);
+
+  console.log({ user });
 
   const joinedDate = format(new Date(user.created_at), "MMMM RRRR");
 
@@ -135,7 +138,7 @@ export default function ProfileBio() {
       <div className="top">
         <div className="image">
           {" "}
-          <img src={user.data.image} alt="" />
+          <img src={getImageForUser(user.id)} alt="" />
         </div>
         {!isLoggedInUserProfile && (
           <div className="actions">

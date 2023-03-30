@@ -22,7 +22,7 @@ export default function MainHeader() {
   return (
     <Header>
       <h1>Home</h1>
-      <Star color="white" />
+      {/* <Star color="white" /> */}
     </Header>
   );
 }

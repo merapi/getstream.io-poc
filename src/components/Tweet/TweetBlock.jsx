@@ -15,6 +15,7 @@ import TweetActorName from "./TweetActorName";
 import { generateTweetLink } from "../../utils/links";
 import useLike from "../../hooks/useLike";
 import useComment from "../../hooks/useComment";
+import getImageForUser from "../../utils/getImageForUser";
 
 const Block = styled.div`
   display: flex;
@@ -164,7 +165,7 @@ export default function TweetBlock({ activity }) {
     <>
       <Block>
         <div className="user-image">
-          <img src={actor.data.image} alt="" />
+          <img src={getImageForUser(actor.id)} alt="" />
         </div>
         <div className="tweet">
           <button onClick={() => navigate(tweetLink)} className="link">
@@ -200,7 +201,7 @@ export default function TweetBlock({ activity }) {
                   <action.Icon
                     color={
                       action.id === "heart" && hasLikedTweet
-                        ? "var(--theme-color)"
+                        ? "#cf3030"
                         : "#777"
                     }
                     size={17}

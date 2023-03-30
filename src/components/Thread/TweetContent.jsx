@@ -16,6 +16,7 @@ import CommentDialog from "../Tweet/CommentDialog";
 import More from "../Icons/More";
 import useComment from "../../hooks/useComment";
 import useLike from "../../hooks/useLike";
+import getImageForUser from "../../utils/getImageForUser";
 
 const Container = styled.div`
   padding: 10px 15px;
@@ -194,7 +195,7 @@ export default function TweetContent({ activity }) {
       <Container>
         <Link to={`/${tweetActor.id}`} className="user">
           <div className="user__image">
-            <img src={tweetActor.image} alt="" />
+            <img src={getImageForUser(tweetActor.id)} alt="" />
           </div>
           <div className="user__name">
             <span className="user__name--name">{tweetActor.name}</span>
@@ -217,11 +218,6 @@ export default function TweetContent({ activity }) {
           <div className="tweet__time">
             <span className="tweet__time--time">{time}</span>
             <span className="tweet__time--date">{date}</span>
-          </div>
-
-          <div className="tweet__analytics">
-            <BarChart color="#888" />
-            <span className="tweet__analytics__text">View Tweet Analytics</span>
           </div>
 
           <div className="tweet__reactions">

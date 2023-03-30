@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import ArrowLeft from "../Icons/ArrowLeft";
 import { ProfileContext } from "./ProfileContent";
+import getImageForUser from "../../utils/getImageForUser";
 
 const Header = styled.header`
   .top {
@@ -40,7 +41,7 @@ const Header = styled.header`
     img {
       width: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: top;
     }
   }
 `;
@@ -80,7 +81,7 @@ export default function ProfileHeader() {
         </div>
       </div>
       <div className="cover">
-        <img src="https://picsum.photos/500/300" />
+        <img src={getImageForUser(user.id)} width={224} height={224} />
       </div>
     </Header>
   );

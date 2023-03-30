@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { formatStringWithLink } from "../../utils/string";
 import More from "../Icons/More";
 import TweetActorName from "../Tweet/TweetActorName";
+import getImageForUser from "../../utils/getImageForUser";
 
 const Block = styled.div`
   display: flex;
@@ -58,7 +59,7 @@ export default function TweetCommentBlock({ comment }) {
   return (
     <Block to="/">
       <div className="user-image">
-        <img src={user.data.image} alt="" />
+        <img src={getImageForUser(user.id)} alt="" />
       </div>
       <div className="comment-tweet">
         <div>

@@ -10,6 +10,7 @@ import Image from "../Icons/Image";
 import Location from "../Icons/Location";
 import Poll from "../Icons/Poll";
 import ProgressRing from "../Icons/ProgressRing";
+import getImageForUser from "../../utils/getImageForUser";
 
 const Container = styled.div`
   width: 100%;
@@ -235,7 +236,7 @@ export default function TweetForm({
         onSubmit={submit}
       >
         <div className="user">
-          <img src={user.image} alt="" />
+          <img src={getImageForUser(user.id)} alt="" />
         </div>
         <div className="input-section">
           <textarea

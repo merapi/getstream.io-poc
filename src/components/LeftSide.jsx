@@ -13,7 +13,8 @@ import Mail from "./Icons/Mail";
 import Bookmark from "./Icons/Bookmark";
 import User from "./Icons/User";
 import More from "./Icons/More";
-import Twitter from "./Icons/Twitter";
+import Logo from "./Icons/Logo";
+import getImageForUser from "../utils/getImageForUser";
 
 const Container = styled.div`
   display: flex;
@@ -78,16 +79,16 @@ const Container = styled.div`
 
       &.btn--home {
         position: relative;
-        &.new-tweets::after {
-          content: "";
-          position: absolute;
-          width: 5px;
-          height: 5px;
-          left: 35px;
-          top: 7px;
-          border-radius: 50%;
-          background-color: var(--theme-color);
-        }
+        // &.new-tweets::after {
+        //   content: "";
+        //   position: absolute;
+        //   width: 5px;
+        //   height: 5px;
+        //   left: 35px;
+        //   top: 7px;
+        //   border-radius: 50%;
+        //   background-color: var(--theme-color);
+        // }
       }
 
       &.btn--more {
@@ -212,7 +213,7 @@ export default function LeftSide({ onClickTweet }) {
   return (
     <Container>
       <Link to="/" className="header">
-        <Twitter color="white" size={25} />
+        <Logo color="#4ae3a8" style={{ width: 32 }} />
       </Link>
       <div className="buttons">
         {menus.map((m) => {
@@ -255,7 +256,7 @@ export default function LeftSide({ onClickTweet }) {
       <button className="profile-section">
         <div className="details">
           <div className="details__img">
-            <img src={userData.image} alt="" />
+            <img src={getImageForUser(userData.id)} alt="" />
           </div>
           <div className="details__text">
             <span className="details__text__name">{userData.name}</span>

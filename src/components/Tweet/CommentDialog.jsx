@@ -4,6 +4,7 @@ import { formatStringWithLink } from "../../utils/string";
 import Modal from "../Modal";
 import TweetActorName from "./TweetActorName";
 import TweetForm from "./TweetForm";
+import getImageForUser from "../../utils/getImageForUser";
 
 const Container = styled.div`
   .modal-block {
@@ -128,7 +129,7 @@ export default function CommentDialog({
         <BlockContent>
           <div className="tweet">
             <div className="img">
-              <img src={tweetActor.data.image} alt="" />
+              <img src={getImageForUser(tweetActor.id)} alt="" />
             </div>
             <div className="details">
               <TweetActorName

@@ -8,6 +8,7 @@ import users from "../users";
 import FollowBtn from "./FollowBtn";
 import More from "./Icons/More";
 import Search from "./Icons/Search";
+import getImageForUser from "../utils/getImageForUser";
 
 const Container = styled.div`
   padding: 0 15px 15px;
@@ -130,7 +131,7 @@ export default function RightSide() {
               <div className="user" key={user.id}>
                 <Link to={`/${user.id}`} className="user__details">
                   <div className="user__img">
-                    <img src={user.image} alt="" />
+                    <img src={getImageForUser(user.id)} alt="" />
                   </div>
                   <div className="user__info">
                     <span className="user__name">{user.name}</span>
