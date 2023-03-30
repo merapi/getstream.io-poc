@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import Profile from "./pages/Profile";
 import Thread from "./pages/Thread";
+import LoadingIndicator from "./components/LoadingIndicator";
 
 const APP_ID = "1241168";
 const API_KEY = "ys3pbu6x7zee";
@@ -34,7 +35,12 @@ export default function App() {
     init();
   }, []);
 
-  if (!client) return <></>;
+  if (!client)
+    return (
+      <>
+        <LoadingIndicator size={50} paddingTop={200} />
+      </>
+    );
 
   return (
     <StreamApp token={user.token} appId={APP_ID} apiKey={API_KEY}>

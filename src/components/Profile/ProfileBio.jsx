@@ -125,8 +125,6 @@ export default function ProfileBio() {
   const { client } = useStreamContext();
   const { user } = useContext(ProfileContext);
 
-  console.log({ user });
-
   const joinedDate = format(new Date(user.created_at), "MMMM RRRR");
 
   const bio = formatStringWithLink(user.data.bio);

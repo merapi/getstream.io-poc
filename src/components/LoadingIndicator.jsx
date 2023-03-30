@@ -5,15 +5,15 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: ${({ paddingTop }) => paddingTop}px;
   background-color: black;
 
   .circle {
     border: 2px solid #333;
     border-radius: 50%;
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: ${({ size }) => size}px;
+    height: ${({ size }) => size}px;
 
     &::after {
       content: "";
@@ -38,9 +38,9 @@ const Container = styled.div`
   }
 `;
 
-export default function LoadingIndicator() {
+export default function LoadingIndicator({ size = 25, paddingTop = 100 }) {
   return (
-    <Container>
+    <Container size={size} paddingTop={paddingTop}>
       <div className="circle"></div>
     </Container>
   );
