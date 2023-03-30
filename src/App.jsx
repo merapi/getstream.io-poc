@@ -38,7 +38,7 @@ export default function App() {
 
   return (
     <StreamApp token={user.token} appId={APP_ID} apiKey={API_KEY}>
-      <Router basename="/getstream.io-poc/">
+      <Router basename="/getstream.io-poc">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<StartPage />} />
