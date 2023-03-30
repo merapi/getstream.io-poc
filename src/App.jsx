@@ -15,8 +15,6 @@ import Thread from "./pages/Thread";
 const APP_ID = "1241168";
 const API_KEY = "ys3pbu6x7zee";
 
-window.global = window; // Hacky fix for Vite and some libs
-
 export default function App() {
   const userId = getFromStorage("user");
 
