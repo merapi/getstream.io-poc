@@ -165,9 +165,6 @@ export default function ProfileBio() {
             <b>{user.followers_count || 0}</b> Followers
           </span>
         </div>
-        <div className="user__followed-by">
-          Not followed by anyone you are following
-        </div>
       </div>
     </Container>
   );
