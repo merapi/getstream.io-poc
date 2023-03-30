@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 import users from "../users";
 import { saveToStorage } from "../utils/storage";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Startpage() {
-  const navigate = useNavigate();
-
+  const location = useLocation();
   const onClickUser = (id) => {
     saveToStorage("user", id);
-    navigate("/home");
+    window.location.href = `${location.pathname}home`; // navigate will not work for this example
   };
 
   return (
