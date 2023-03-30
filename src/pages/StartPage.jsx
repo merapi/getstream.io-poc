@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 
 export default function Startpage() {
   const location = useLocation();
+  console.log({ location });
   const onClickUser = (id) => {
     saveToStorage("user", id);
     window.location.href = `${location.pathname}home`; // navigate will not work for this example
