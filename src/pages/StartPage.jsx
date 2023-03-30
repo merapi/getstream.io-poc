@@ -6,7 +6,7 @@ import { saveToStorage } from "../utils/storage";
 export default function Startpage() {
   const onClickUser = (id) => {
     saveToStorage("user", id);
-    window.location.href = "/home";
+    window.location.href = "/getstream.io-poc/home";
   };
 
   return (
