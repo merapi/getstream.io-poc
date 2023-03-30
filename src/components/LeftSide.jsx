@@ -185,32 +185,22 @@ export default function LeftSide({ onClickTweet }) {
       link: "/home",
     },
     {
-      id: "explore",
-      label: "Explore",
-      Icon: Hashtag,
-    },
-    {
-      id: "communities",
-      label: "Communities",
-      Icon: Group,
-    },
-    {
       id: "notifications",
       label: "Notifications",
       Icon: Bell,
       link: "/notifications",
       value: newNotifications,
     },
-    {
-      id: "messages",
-      label: "Messages",
-      Icon: Mail,
-    },
-    {
-      id: "bookmarks",
-      label: "Bookmarks",
-      Icon: Bookmark,
-    },
+    // {
+    //   id: "messages",
+    //   label: "Messages",
+    //   Icon: Mail,
+    // },
+    // {
+    //   id: "bookmarks",
+    //   label: "Bookmarks",
+    //   Icon: Bookmark,
+    // },
     {
       id: "profile",
       label: "Profile",
@@ -252,12 +242,12 @@ export default function LeftSide({ onClickTweet }) {
             </Link>
           );
         })}
-        <button className="btn--more">
+        {/* <button className="btn--more">
           <div className="btn--icon">
             <More color="white" size={20} />
           </div>
           <span>More</span>
-        </button>
+        </button> */}
       </div>
       <button onClick={onClickTweet} className="tweet-btn">
         Tweet
